@@ -50,7 +50,7 @@ AV.Query.doCloudQuery(cql, []).then(function (data) {
                             Complete</span></div>
                       </div></td>
                         <td>${g.get('temperature')}℃</td>
-                        <td>${g.get('hostname')}: ${g.get('ip')}${g.get('note') ? ', ' + g.get('note'):''}</td>
+                        <td>${g.get('hostname')}</td>
                         <td>${timeAgo(g.get('updatedAt'), i18n_set['en'])}</td>
                         </tr>`)
         if (timeDelta(g.get('updatedAt')) <= 1200) {
