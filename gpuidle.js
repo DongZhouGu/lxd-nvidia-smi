@@ -41,7 +41,7 @@ AV.Query.doCloudQuery(cql, []).then(function (data) {
     results.forEach(g => {
         $('#gpu-table').append(`<tr>
                         <td>${timeDelta(g.get('updatedAt')) > 1200 ? '<span class="badge bgc-red-50 c-red-700 p-10 lh-0 tt-c badge-pill">offline</span>' : (g.get('is_idle') ? '<span class="badge bgc-green-50 c-green-700 p-10 lh-0 tt-c badge-pill">idle</span>' : '<span class="badge bgc-orange-50 c-orange-700 p-10 lh-0 tt-c badge-pill">running</span>')}</td>
-                        <td>${g.get('location')}</td>
+               
                         <td>${g.get('name').split("GeForce ").pop()}</td>
                         <td>${Math.floor(g.get('load')* 100)}%</td>
                         <td>
